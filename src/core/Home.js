@@ -22,15 +22,12 @@ export default function Home(){
 
 
     useEffect( () => {loadAllProducts();}, [])
-    const returnedArray = Array.from(products)
-
     
     return(
         <div>
             <h1>Home compo</h1>
-            <div classnm='row'>
-
-            {returnedArray.map((product,index) => {                    
+            <div classname='row'>
+            {products && products.map((product,index) => {                    
                         return(
                         <div key={index}>
                             <h1>
